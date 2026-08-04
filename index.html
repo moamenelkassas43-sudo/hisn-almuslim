@@ -2,194 +2,6 @@
     <script src="script.js"></script>
 </body>
 </html>
-<div class="duaa-card">
-    <span class="duaa-number">1</span>
-    <p class="duaa-text">{رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ}</p>
-    <button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button>
-</div>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أذكار وأدعية | حصن المسلم - القصاص</title>
-    
-    <!-- خطوط جوجل (القاهرة والأميري) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- ربط ملف الـ CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- الترويسة العلوية -->
-    <header>
-        <div class="logo">أذكار وأدعية</div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-            <button id="theme-toggle" class="btn-gold" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">🌙 الوضع الليلى</button>
-            <span class="author-badge">إعداد: مؤمن القصاص</span>
-        </div>
-    </header>
-
-    <!-- واجهة البداية -->
-    <section class="hero">
-        <h1>ألا بذكر الله تطمئن القلوب</h1>
-        <p>موسوعة شامِلة تُضم 100 دعاء ومأثور من القرآن الكريم والسنة النبوية الصحيحة</p>
-        <div class="gold-divider"></div>
-    </section>
-
-    <div class="container">
-
-        <!-- 1. قسم توليد دعاء مخصص بالاسم -->
-        <section class="pray-for-someone">
-            <h3>✨ ادعُ لمن تحب</h3>
-            <p>اكتب اسم شخص عزيز عليك لتوليد دعاء مبارك ومخصص له</p>
-            <div class="input-group">
-                <input type="text" id="person-name" class="pray-input" placeholder="أدخل الاسم هنا (مثال: أمي، صديقي أحمد)...">
-                <button onclick="generateCustomPrayer()" class="btn-gold">توليد الدعاء</button>
-            </div>
-            
-            <div id="prayer-result" class="prayer-result-box" style="display:none;">
-                <p id="generated-prayer" class="prayer-text"></p>
-                <button onclick="copyPrayerText()" class="btn-outline">📋 نسخ الدعاء</button>
-            </div>
-        </section>
-
-        <!-- 2. قسم السبحة الإلكترونية -->
-        <section class="counter-section">
-            <h3>📿 السبحة الإلكترونية</h3>
-            <div id="counter-value" class="counter-number">0</div>
-            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                <button onclick="countUp()" class="btn-gold" style="padding: 0.8rem 2.5rem; font-size: 1.2rem;">تسبيح +1</button>
-                <button onclick="resetCounter()" class="btn-outline">تصفير العداد</button>
-            </div>
-        </section>
-
-        <!-- 3. قسم 100 دعاء ومأثور كاملة -->
-        <div class="section-header">
-            <h2>الأدعية والأذكار الجامعة (100 دعاء)</h2>
-        </div>
-
-        <div class="duaa-list">
-            <!-- 40 دعاء من القرآن الكريم -->
-            <div class="duaa-card"><span class="duaa-number">1</span><p class="duaa-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">2</span><p class="duaa-text">رَبَّنَا لا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">3</span><p class="duaa-text">رَبِّ هَبْ لِي مِنْ لَدُنْكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">4</span><p class="duaa-text">رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">5</span><p class="duaa-text">رَبَّنَا مَا خَلَقْتَ هَذَا بَاطِلاً سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">6</span><p class="duaa-text">رَبَّنَا إِنَّنَا سَمِعْنَا مُنَادِياً يُنَادِي لِلإِيمَانِ أَنْ آمِنُوا بِرَبِّكُمْ فَآمَنَّا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">7</span><p class="duaa-text">رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الأَبْرَارِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">8</span><p class="duaa-text">رَبَّنَا وَآتِنَا مَا وَعَدْتَنَا عَلَى رُسُلِكَ وَلا تُخْزِنَا يَوْمَ الْقِيَامَةِ إِنَّكَ لا تُخْلِفُ الْمِيعَادَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">9</span><p class="duaa-text">رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">10</span><p class="duaa-text">رَبَّنَا لا تَجْعَلْنَا مَعَ الْقَوْمِ الظَّالِمِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">11</span><p class="duaa-text">رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْراً وَتَوَفَّنَا مُسْلِمِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">12</span><p class="duaa-text">حَسْبِيَ اللَّهُ لا إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">13</span><p class="duaa-text">رَبَّنَا لا تَجْعَلْنَا فِتْنَةً لِلْقَوْمِ الظَّالِمِينَ وَنَجِّنَا بِرَحْمَتِكَ مِنَ الْقَوْمِ الْكَافِرِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">14</span><p class="duaa-text">رَبِّ إِنِّي أَعُوذُ بِكَ أَنْ أَسْأَلَكَ مَا لَيْسَ لِي بِهِ عِلْمٌ وَإِلاَّ تَغْفِرْ لِي وَتَرْحَمْنِي أَكُنْ مِنَ الْخَاسِرِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">15</span><p class="duaa-text">أَنْتَ وَلِيِّي فِي الدُّنْيَا وَالآخِرَةِ تَوَفَّنِي مُسْلِماً وَأَلْحِقْنِي بِالصَّالِحِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">16</span><p class="duaa-text">رَبِّ اجْعَلْنِي مُقِيمَ الصَّلاةِ وَمِنْ ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">17</span><p class="duaa-text">رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">18</span><p class="duaa-text">رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">19</span><p class="duaa-text">رَبِّ أَدْخِلْنِي مُدْخَلَ صِدْقٍ وَأَخْرِجْنِي مُخْرَجَ صِدْقٍ وَاجْعَلْ لِي مِنْ لَدُنْكَ سُلْطَاناً نَصِيراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">20</span><p class="duaa-text">رَبَّنَا آتِنَا مِنْ لَدُنْكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَداً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">21</span><p class="duaa-text">رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي يَفْقَهُوا قَوْلِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">22</span><p class="duaa-text">رَبِّ زِدْنِي عِلْماً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">23</span><p class="duaa-text">لا إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">24</span><p class="duaa-text">رَبِّ لا تَذَرْنِي فَرْداً وَأَنْتَ خَيْرُ الْوَارِثِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">25</span><p class="duaa-text">رَبِّ أَنْزِلْنِي مُنْزَلاً مُبَارَكاً وَأَنْتَ خَيْرُ الْمُنْزِلِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">26</span><p class="duaa-text">رَبِّ أَعُوذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَعُوذُ بِكَ رَبِّ أَنْ يَحْضُرُونِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">27</span><p class="duaa-text">رَبَّنَا آمَنَّا فَاغْفِرْ لَنَا وَارْحَمْنَا وَأَنْتَ خَيْرُ الرَّاحِمِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">28</span><p class="duaa-text">رَبَّنَا اصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ إِنَّ عَذَابَهَا كَانَ غَرَاماً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">29</span><p class="duaa-text">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَاماً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">30</span><p class="duaa-text">رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">31</span><p class="duaa-text">رَبِّ أَنْ أَعْمَلَ صَالِحاً تَرْضَاهُ وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">32</span><p class="duaa-text">رَبِّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">33</span><p class="duaa-text">رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">34</span><p class="duaa-text">رَبِّ انْصُرْنِي عَلَى الْقَوْمِ الْمُفْسِدِينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">35</span><p class="duaa-text">رَبَّنَا وَسِعْتَ كُلَّ شَيْءٍ رَحْمَةً وَعِلْماً فَاغْفِرْ لِلَّذِينَ تَابُوا وَاتَّبَعُوا سَبِيلَكَ وَقِهِمْ عَذَابَ الْجَحِيمِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">36</span><p class="duaa-text">رَبَّنَا وَأَدْخِلْهُمْ جَنَّاتِ عَدْنٍ الَّتِي وَعَدْتَهُمْ وَمَنْ صَلَحَ مِنْ آبَائِهِمْ وَأَزْوَاجِهِمْ وَذُرِّيَّاتِهِمْ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">37</span><p class="duaa-text">رَبَّنَا اكْشِفْ عَنَّا الْعَذَابَ إِنَّا مُؤْمِنُونَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">38</span><p class="duaa-text">رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحاً تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">39</span><p class="duaa-text">رَبَّنَا اغْفِرْ لَنَا وَلإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالإِيمَانِ وَلا تَجْعَلْ فِي قُلُوبِنَا غِلاًّ لِلَّذِينَ آمَنُوا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">40</span><p class="duaa-text">رَبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبْنَا وَإِلَيْكَ الْمَصِيرُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-
-            <!-- 60 دعاء من السنة النبوية الصحيحة -->
-            <div class="duaa-card"><span class="duaa-number">41</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">42</span><p class="duaa-text">يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">43</span><p class="duaa-text">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">44</span><p class="duaa-text">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">45</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَالْهَرَمِ وَعَذَابِ الْقَبْرِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">46</span><p class="duaa-text">اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا، وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا، أَنْتَ وَلِيُّهَا وَمَوْلاهَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">47</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لا يَنْفَعُ، وَمِنْ قَلْبٍ لا يَخْشَعُ، وَمِنْ نَفْسٍ لا تَشْبَعُ، وَمِنْ دَعْوَةٍ لا يُسْتَجَابُ لَهَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">48</span><p class="duaa-text">اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">49</span><p class="duaa-text">اللَّهُمَّ أَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي، وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِي فِي كُلِّ خَيْرٍ، وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْ كُلِّ شَرٍّ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">50</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">51</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">52</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">53</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ النَّارِ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">54</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ مَا سَأَلَكَ عَبْدُكَ وَنَبِيُّكَ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا عَاذَ بِهِ عَبْدُكَ وَنَبِيُّكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">55</span><p class="duaa-text">اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْماً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">56</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">57</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ جَهْدِ الْبَلاءِ، وَدَرَكِ الشَّقَاءِ، وَسُوءِ الْقَضَاءِ، وَشَمَاتَةِ الأَعْدَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">58</span><p class="duaa-text">اللَّهُمَّ حَاسِبْنِي حِسَاباً يَسِيراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">59</span><p class="duaa-text">اللَّهُمَّ إِني أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">60</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ مَا عَمِلْتُ وَمِنْ شَرِّ مَا لَمْ أَعْمَلْ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">61</span><p class="duaa-text">اللَّهُمَّ اكْفِنِي بِحَلالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">62</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">63</span><p class="duaa-text">اللَّهُمَّ طَهِّرْنِي مِنَ الذُّنُوبِ وَالْخَطَايَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">64</span><p class="duaa-text">اللَّهُمَّ نَقِّنِي مِنَ الذُّنُوبِ كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ الدَّنَسِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">65</span><p class="duaa-text">اللَّهُمَّ اشْفِ مَرْضَانَا وَارْحَمْ مَوْتَانَا وَعَافِ مُبْتَلَانَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">66</span><p class="duaa-text">اللَّهُمَّ أَلْهِمْنِي رُشْدِي وَأَعِذْنِي مِنْ شَرِّ نَفْسِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">67</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ وَالْجُنُونِ وَالْجُذَامِ وَمِنْ سَيِّئِ الأَسْقَامِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">68</span><p class="duaa-text">اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">69</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الأَخْلاقِ وَالأَعْمَالِ وَالأَهْوَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">70</span><p class="duaa-text">اللَّهُمَّ إِنَّكَ سَمِيعٌ قَرِيبٌ مُجِيبُ الدُّعَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">71</span><p class="duaa-text">اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُوراً، وَفِي بَصَرِي نُوراً، وَفِي سَمْعِي نُوراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">72</span><p class="duaa-text">اللَّهُمَّ اجْعَلْ عَنْ يَمِينِي نُوراً، وَعَنْ يَسَارِي نُوراً، وَمِنْ فَوْقِي نُوراً، وَمِنْ تَحْتِي نُوراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">73</span><p class="duaa-text">اللَّهُمَّ أَعْظِمْ لِي نُوراً وَاجْعَلْنِي نُوراً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">74</span><p class="duaa-text">اللَّهُمَّ إِني أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">75</span><p class="duaa-text">اللَّهُمَّ أَعُوذُ بِكَ أَنْ أَظْلِمَ أَوْ أُظْلَمَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">76</span><p class="duaa-text">يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">77</span><p class="duaa-text">اللَّهُمَّ رَحْمَتَكَ أَرْجُو فَلا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">78</span><p class="duaa-text">اللَّهُمَّ لا سَهْلَ إِلاَّ مَا جَعَلْتَهُ سَهْلاً وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلاً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">79</span><p class="duaa-text">اللَّهُمَّ إِنِّي عَبْدُكَ ابْنُ عَبْدِكَ ابْنُ أَمَتِكَ نَاصِيَتِي بِيَدِكَ مَاضٍ فِيَّ حُكْمُكَ عَدْلٌ فِيَّ قَضَاؤُكَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">80</span><p class="duaa-text">اللَّهُمَّ اجْعَلِ الْقُرْآنَ رَبِيعَ قَلْبِي وَنُورَ صَدْرِي وَجَلاءَ حُزْنِي وَذَهَابَ هَمِّي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">81</span><p class="duaa-text">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">82</span><p class="duaa-text">اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">83</span><p class="duaa-text">أَسْتَغْفِرُ اللَّهَ الَّذِي لا إِلَهَ إِلاَّ هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">84</span><p class="duaa-text">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">85</span><p class="duaa-text">لا إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">86</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ يَقِيناً صَادِقاً يُبَاشِرُ قَلْبِي</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">87</span><p class="duaa-text">اللَّهُمَّ ثَبِّتْنِي بِالْقَوْلِ الثَّابِتِ فِي الْحَيَاةِ الدُّنْيَا وَفِي الآخِرَةِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">88</span><p class="duaa-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْفَوْزَ فِي الْقَضَاءِ، وَنُزُلَ الشُّهَدَاءِ، وَعَيْشَ السُّعَدَاءِ، وَالنَّصْرَ عَلَى الأَعْدَاءِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">89</span><p class="duaa-text">اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلاَّ أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">90</span><p class="duaa-text">أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لا يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">91</span><p class="duaa-text">اللَّهُمَّ بَارِكْ لَنَا فِي أَوْقَاتِنَا وَأَعْمَالِنَا وَأَعْمَارِنَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">92</span><p class="duaa-text">اللَّهُمَّ اجْعَلْنَا مِنَ الَّذِينَ يَسْتَمِعُونَ الْقَوْلَ فَيَتَّبِعُونَ أَحْسَنَهُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">93</span><p class="duaa-text">اللَّهُمَّ ارْزُقْنَا حُسْنَ الْخَاتِمَةِ وَاجْعَلْ آخِرَ كَلامِنَا لا إِلَهَ إِلاَّ اللَّهُ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">94</span><p class="duaa-text">اللَّهُمَّ نَوِّرْ قُلُوبَنَا بِالإِيمَانِ وَزَيِّنْ أَيَّامَنَا بِالطَّاعَاتِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">95</span><p class="duaa-text">اللَّهُمَّ قِنَا شَرَّ الأَشْرَارِ وَكَيْدَ الْفُجَّارِ وَحَوَادِثَ اللَّيْلِ وَالنَّهَارِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">96</span><p class="duaa-text">اللَّهُمَّ ارْزُقْنَا صَبْراً جَمِيلاً وَفَرَجاً قَرِيباً وَأَجْراً عَظِيماً</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">97</span><p class="duaa-text">اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ الأَحْيَاءِ مِنْهُمْ وَالأَمْوَاتِ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">98</span><p class="duaa-text">اللَّهُمَّ اسْتُرْ عَوْرَاتِنَا وَآمِنْ رَوْعَاتِنَا وَاحْفَظْنَا مِنْ بَيْنِ أَيْدِينَا وَمِنْ خَلْفِنَا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">99</span><p class="duaa-text">اللَّهُمَّ اجْعَلْنَا هُدَاةً مُهْتَدِينَ غَيْرَ ضَالِّينَ وَلا مُضِلِّينَ</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-            <div class="duaa-card"><span class="duaa-number">100</span><p class="duaa-text">اللَّهُمَّ اخْتِمْ بِالصَّالِحَاتِ أَعْمَالَنَا، وَحَقِّقْ بِرَحْمَتِكَ رَجَاءَنَا، وَتَوَفَّنَا وَأَنْتَ رَاضٍ عَنَّا</p><button onclick="copySingleDuaa(this)" class="btn-copy-sm">📋 نسخ</button></div>
-        </div>
-
-    </div>
-
-    <!-- التذييل السفلي -->
-    <footer>
-        <p>جميع الحقوق محفوظة © 2026 | حصن المسلم</p>
-        <p class="author-footer">تطوير وإعداد العبد الفقير لرحمة  لله: مؤمن القصاص</p>
-    </footer>
-
-    <!-- ربط ملف الـ JavaScript -->
-    <script src="script.js"></script>
-</body>
-</html>
 <script src="app.js"></script>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -260,6 +72,28 @@
                 <button onclick="resetCounter()" class="btn-outline">تصفير العداد</button>
             </div>
         </section>
+<!-- قسم السبحة الإلكترونية المطور -->
+<section class="counter-section">
+    <h3>📿 السبحة الإلكترونية المتقدمة</h3>
+    
+    <!-- قائمة اختيار الذكر -->
+    <div style="margin-bottom: 1rem;">
+        <select id="tasbeeh-type" onchange="changeTasbeehType()" class="pray-input" style="max-width: 250px; text-align: center; font-weight: bold;">
+            <option value="استغفار">أستغفر الله العظيم وأتوب إليه</option>
+            <option value="تسبيح">سبحان الله وبحمده، سبحان الله العظيم</option>
+            <option value="حمد">الحمد لله رب العالمين</option>
+            <option value="تكبير">الله أكبر كبيراً</option>
+            <option value="حوقلة">لا حول ولا قوة إلا بالله العلي العظيم</option>
+            <option value="صلاة على النبي">اللهم صلِّ وسلّم على نبينا محمد</option>
+        </select>
+    </div>
+
+    <div id="counter-value" class="counter-number">0</div>
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <button onclick="countUp()" class="btn-gold" style="padding: 0.8rem 2.5rem; font-size: 1.2rem;">تسبيح +1</button>
+        <button onclick="resetCounter()" class="btn-outline">تصفير العداد</button>
+    </div>
+</section>
 
         <!-- 4. قسم أذكار الصباح والمساء -->
         <section class="azkar-section">
@@ -348,7 +182,7 @@
 
     <footer>
         <p>جميع الحقوق محفوظة © 2026 | حصن المسلم</p>
-        <p class="author-footer">تطوير وإعداد: مؤمن القصاص</p>
+        <p class="author-footer">تطوير وإعداد العبد الفقير لرحمة الله: مؤمن القصاص</p>
     </footer>
 
     <script src="script.js"></script>
