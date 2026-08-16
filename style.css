@@ -1,28 +1,29 @@
 /* ==========================================
-   ملف الـ CSS المحدث - خط Tajawal و Reem Kufi
+   ملف الـ CSS المحدث - ألوان ملكية فاخرة + خطوط المسيري و IBM Plex
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-primary: #050508;
-    --bg-card: rgba(18, 18, 28, 0.85);
-    --border-color: rgba(212, 175, 55, 0.25);
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent-gold: #d4af37;
-    --accent-gold-hover: #f3df74;
-    --accent-blue: #38bdf8;
-    --shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    /* ألوان ملكية جديدة تماماً (مزيج بين الكحلي الملكي الفاخر والفضّي الساطع) */
+    --bg-primary: #0a0f1d;
+    --bg-card: rgba(15, 23, 42, 0.85);
+    --border-color: rgba(56, 189, 248, 0.25);
+    --text-color: #f0f6fc;
+    --text-muted: #8b949e;
+    --accent-gold: #38bdf8;          /* تحويل اللمسة الأساسية إلى الأزرق السماوي المشرق */
+    --accent-gold-hover: #79c0ff;    /* درجة الهوفر الفاتحة */
+    --accent-blue: #58a6ff;
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.dark-mode {
-    --bg-primary: #020204;
-    --bg-card: rgba(12, 12, 18, 0.9);
-    --border-color: rgba(212, 175, 55, 0.15);
-    --text-color: #f1f5f9;
-    --text-muted: #64748b;
+    --bg-primary: #010409;
+    --bg-card: rgba(13, 17, 23, 0.9);
+    --border-color: rgba(56, 189, 248, 0.15);
+    --text-color: #c9d1d9;
+    --text-muted: #6e7681;
 }
 
 * {
@@ -33,9 +34,9 @@ body.dark-mode {
     scroll-behavior: smooth;
 }
 
-/* تطبيق خط Tajawal (تجول) على النصوص الأساسية والعامة */
+/* تطبيق خط IBM Plex Sans Arabic على النصوص الأساسية والعامة */
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-color);
     line-height: 1.9;
@@ -53,7 +54,7 @@ body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(4, 4, 8, 0.9);
+    background: rgba(10, 15, 29, 0.92);
     z-index: -1;
 }
 
@@ -76,13 +77,13 @@ header {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-gold);
-    font-family: 'Reem Kufi', sans-serif;
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    font-family: 'El Messiri', sans-serif;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
 .author-badge {
-    background: linear-gradient(135deg, var(--accent-gold), #aa8c2c);
-    color: #000;
+    background: linear-gradient(135deg, var(--accent-gold), #1f6feb);
+    color: #fff;
     padding: 0.4rem 1.2rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -95,11 +96,11 @@ header {
 }
 
 .hero h1 {
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'El Messiri', sans-serif;
     font-size: 3rem;
     color: var(--accent-gold);
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
 }
 
 .hero p {
@@ -143,7 +144,7 @@ header {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     text-align: center;
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 }
 
 .input-group {
@@ -185,13 +186,13 @@ header {
 }
 
 .btn-gold {
-    background: linear-gradient(135deg, var(--accent-gold), #aa8c2c);
+    background: linear-gradient(135deg, var(--accent-gold), #1f6feb);
     color: #000;
 }
 
 .btn-gold:hover {
     background: var(--accent-gold-hover);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
     transform: translateY(-2px);
 }
 
@@ -204,7 +205,7 @@ header {
 .btn-outline:hover {
     background: var(--accent-gold);
     color: #000;
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
     transform: translateY(-2px);
 }
 
@@ -215,7 +216,7 @@ header {
     border-radius: 14px;
     border-right: 5px solid var(--accent-gold);
     white-space: pre-line;
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-size: 1.15rem;
     text-align: center;
 }
@@ -223,10 +224,10 @@ header {
 .counter-number {
     font-size: 5rem;
     font-weight: 900;
-    color: var(--accent-blue);
+    color: var(--accent-gold);
     margin: 1rem 0;
     text-align: center;
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'El Messiri', sans-serif;
     text-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
 }
 
@@ -236,7 +237,7 @@ header {
 }
 
 .section-header h2 {
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'El Messiri', sans-serif;
     font-size: 2.2rem;
     color: var(--accent-gold);
 }
@@ -265,7 +266,7 @@ header {
     background: var(--accent-gold);
     color: #000;
     border-color: var(--accent-gold);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
 
 .azkar-container, .duaa-list {
@@ -310,7 +311,7 @@ header {
 }
 
 .duaa-text {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     font-size: 1.15rem;
     line-height: 2.1;
     color: var(--text-color);
@@ -332,7 +333,7 @@ header {
     background: rgba(56, 189, 248, 0.1);
     padding: 0.3rem 0.9rem;
     border-radius: 15px;
-    color: var(--accent-blue);
+    color: var(--accent-gold);
     border: 1px solid rgba(56, 189, 248, 0.3);
     font-weight: 700;
 }
@@ -371,9 +372,9 @@ footer {
     margin-top: 0.3rem;
 }
 
-/* تخصيص خط Reem Kufi للعناوين الكبرى لتعطي فخامة */
+/* تخصيص خط El Messiri للعناوين الكبرى لتعطي فخامة */
 h1, h2, h3 {
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'El Messiri', sans-serif;
     font-weight: 700;
 }
 
